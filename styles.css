@@ -3,9 +3,9 @@
     --corBranca: #fff;
     --corPreta: #002B36;
     --corBege: #F3E9E1;
-    --corAzul: #002451;
+    --corAzulMarinho: #002451;
     --corVermelha: #F36D6B;
-    --corAzulEscuro: #073642;
+    --corFundoMaisClaro: #073642;
     --border: 2px solid var(--corVermelha);
 }
 
@@ -39,6 +39,7 @@ main {
     height: 50px;
     padding-inline: 2rem;
     border: var(--border);
+    background-color: var(--corFundoMaisClaro);
 }
 
 .input {
@@ -54,7 +55,7 @@ main {
     margin-bottom: 1rem;
     font-size: 1.25rem;
     border: var(--border);
-    background: var(--corAzulEscuro);
+    background: var(--corFundoMaisClaro);
     color: var(--corBege);
     padding: 0.5rem 1rem;
     font-weight: bold;
