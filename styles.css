@@ -1,11 +1,12 @@
 /* paleta de cores */
 :root {
     --corBranca: #fff;
-    --corPreta: #000;
+    --corPreta: #002B36;
     --corBege: #F3E9E1;
-    --corCinza: #B4C4C3;
+    --corAzul: #002451;
     --corVermelha: #F36D6B;
-    --corAzulEscuro: #2E535E;
+    --corAzulEscuro: #073642;
+    --border: 2px solid var(--corVermelha);
 }
 
 html {
@@ -15,7 +16,6 @@ html {
 }
 
 body {
-    /*display: flex;*/
     min-height: 100vh;
     background: var(--corPreta);
     color: var(--corBege);
@@ -23,8 +23,46 @@ body {
     margin: 0px;
 }
 
+main {
+    padding-inline: 6rem;
+}
+
 .page-container {
     width: 100%;
     display: block;
     
+}
+
+
+/* demonstrações do código */
+.input, .output {
+    height: 50px;
+    padding-inline: 2rem;
+    border: var(--border);
+}
+
+.input {
+    margin-bottom: 1rem;
+}
+
+/* estilizar botões da demonstração de código */
+.container-bt {
+    display: flex;
+}
+
+.bt-ativar, .bt-resetar {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border: var(--border);
+    background: var(--corAzulEscuro);
+    color: var(--corBege);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.bt-ativar:hover, .bt-resetar:hover {
+    background: var(--corVermelha);
+    color: var(--corPreta);
 }
