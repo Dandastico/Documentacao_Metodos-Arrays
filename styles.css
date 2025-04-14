@@ -1,12 +1,25 @@
-/* paleta de cores */
+/* variáveis */
 :root {
+    /* cores */
     --corBranca: #fff;
     --corPreta: #002B36;
     --corBege: #F3E9E1;
     --corAzulMarinho: #002451;
     --corVermelha: #F36D6B;
     --corFundoMaisClaro: #073642;
-    --border: 2px solid var(--corVermelha);
+
+    /* bordas */
+    --border: 1px solid var(--corVermelha);
+
+    /* tipografia */
+    --paragrafoMedio: 1rem;
+    --paragrafoPequeno: 0.75rem;
+}
+
+/* retirar carectirísticas padrões de elementos */
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -24,7 +37,11 @@ body {
 }
 
 main {
-    padding-inline: 6rem;
+    padding-inline: 15rem;
+}
+
+p {
+    font-size: var(--paragrafoMedio);
 }
 
 .page-container {
@@ -35,6 +52,11 @@ main {
 
 
 /* demonstrações do código */
+.container-blocos-codigos {
+    padding: 1rem;
+    background-color: var(--corFundoMaisClaro);
+}
+
 .input, .output {
     height: 50px;
     padding-inline: 2rem;
@@ -53,7 +75,7 @@ main {
 
 .bt-ativar, .bt-resetar {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: var(--paragrafoPequeno);
     border: var(--border);
     background: var(--corFundoMaisClaro);
     color: var(--corBege);
