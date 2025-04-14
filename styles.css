@@ -61,6 +61,7 @@ p {
 .container-blocos-codigos {
     padding: 1rem;
     background-color: var(--corFundoMaisClaro);
+    margin-top: 1rem;
 }
 
 .header-codigo {
@@ -76,6 +77,10 @@ p {
 
 .input {
     margin-bottom: 1rem;
+}
+
+.output {
+    height: 5rem;
 }
 
 /* estilizar botões da demonstração de código */
