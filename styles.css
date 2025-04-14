@@ -7,6 +7,7 @@
     --corAzulMarinho: #002451;
     --corVermelha: #F36D6B;
     --corFundoMaisClaro: #073642;
+    --corComentario: #586E75;
 
     /* bordas */
     --border: 1px solid var(--corVermelha);
@@ -14,12 +15,6 @@
     /* tipografia */
     --paragrafoMedio: 1rem;
     --paragrafoPequeno: 0.75rem;
-}
-
-/* retirar carectirísticas padrões de elementos */
-h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -40,14 +35,25 @@ main {
     padding-inline: 15rem;
 }
 
+
+/* tipografia */
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-weight: 400;
+}
+
 p {
     font-size: var(--paragrafoMedio);
 }
 
+
 .page-container {
     width: 100%;
     display: block;
-    
 }
 
 
@@ -57,9 +63,13 @@ p {
     background-color: var(--corFundoMaisClaro);
 }
 
+.header-codigo {
+    border: var(--border);
+    padding: 0.5rem 0.75rem;
+}
+
 .input, .output {
-    height: 50px;
-    padding-inline: 2rem;
+    padding: 1rem 0.75rem;
     border: var(--border);
     background-color: var(--corFundoMaisClaro);
 }
@@ -80,7 +90,7 @@ p {
     background: var(--corFundoMaisClaro);
     color: var(--corBege);
     padding: 0.5rem 1rem;
-    font-weight: bold;
+    font-weight: 800;
     cursor: pointer;
     margin-right: 1rem;
 }
@@ -88,4 +98,15 @@ p {
 .bt-ativar:hover, .bt-resetar:hover {
     background: var(--corVermelha);
     color: var(--corPreta);
+}
+
+/* tipografia dos códigos */
+.js {
+    display: block;
+    font-size: var(--paragrafoMedio);
+    margin-bottom: 0.375rem;
+}
+
+.comentario {
+    color: var(--corComentario);
 }
