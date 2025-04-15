@@ -10,7 +10,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
         <link href="styles.css" rel="stylesheet">
-        <title>JS Array.reverse()</title>
+        <title>JS Array.toReversed()</title>
     </head>
     <body>
         <div class="page-container">
@@ -31,18 +31,18 @@
                 <article>
                     <header>
                         <h2 class="titulo-artigo">
-                            reverse()
+                            toReversed()
                         </h2>
                     </header>
                     <section class="intro">
                         <p class="paragrafo-artigo">
-                            O método reverse(), ao contrário de sort(), não ordena de maneira ascendente ou descendente os elementes de um array. O que o método faz é inverter os índices dos elementos que compõe o array, substituindo a posição do primeiro com o último, do segundo com o penúltimo, até encontrar a metade.
+                            O método toReversed() não ordena de maneira ascendente ou descendente os elementes de um array. O que o método faz é inverter os índices dos elementos que compõe o array, substituindo a posição do primeiro com o último, do segundo com o penúltimo, até encontrar a metade.
                         </p>
                         <p class="paragrafo-artigo">
-                            Assim como o sort(), o reverse() é um método destrutivo. Ou seja, ao utillizá-lo perde-se o array original. 
+                            O método toReversed() não é destrutivo, considerado uma versão copiadora de reverse().
                         </p>
                     </section>
-                    <!-- demonstração de reverse() -->
+                    <!-- ordenamento com strings -->
                     <section class="demo">
                         <header>
                             <h3 class="titulo-secao">
@@ -51,7 +51,7 @@
                         </header>
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.reverse()</h4>
+                                <h4>Array.toReversed()</h4>
                             </header>
 
                             <div class="input">
@@ -59,13 +59,13 @@
                                 <span class="js codigo">let nomes = ["prof carvalho", "ash ketchum da cidade de pallet", "misty", "brock"];</span>
                                 <span class="js codigo">console.log(nomes);</span>
                                 <br />
-                                <span class="js comentario">// execução do método reverse()</span>
-                                <span class="js codigo">nomes.reverse();</span>
-                                <span class="js codigo">console.log(nomes);</span>
+                                <span class="js comentario">// execução do método toReversed()</span>
+                                <span class="js codigo">let nomesInvertidos = nomes.toReversed();</span>
+                                <span class="js codigo">console.log(nomesInvertidos);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-reverse-1">
+                                <button type="button" class="bt-ativar" id="bt-ativar-toreversed-1">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-1">
@@ -82,17 +82,17 @@
                     <section>
                         <header>
                             <h3 class="titulo-secao">
-                                Trabalho em equipe com sort()
+                                Trabalho em equipe com toSorted()
                             </h3>
                         </header>
                         <p class="paragrafo-artigo">
-                            Como o método sort(), por padrão, ordena os elementos que compõe o array em ordem alfabética, é possível utilizar o reverse() após o método sort() para ordenar o array em modo decrescente (do 'Z' ao 'A').
+                            Como o método toSorted(), por padrão, ordena os elementos que compõe o array em ordem alfabética, é possível utilizar o toReversed() após o método toSorted() para ordenar o array em modo decrescente (do 'Z' ao 'A').
                         </p>
                         
                         <!-- demonstração de código -->
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.reverse()</h4>
+                                <h4>Array.toReversed()</h4>
                             </header>
 
                             <div class="input">
@@ -101,16 +101,16 @@
                                 <span class="js codigo">console.log(amigos);</span>
                                 <br />
                                 <span class="js comentario">// ordenar array sem instrução</span>
-                                <span class="js codigo">amigos.sort();</span>
-                                <span class="js codigo">console.log(amigos);</span>
+                                <span class="js codigo">let amigosOrdenados = amigos.toSorted();</span>
+                                <span class="js codigo">console.log(amigosOrdenados);</span>
                                 <br />
                                 <span class="js comentario">// ordenamento dos elementos do array de maneira ascendente</span>
-                                <span class="js codigo">amigos.reverse();</span>
-                                <span class="js codigo">console.log(amigos);</span>
+                                <span class="js codigo">amigosOrdenados = amigosOrdenados.toReversed();</span>
+                                <span class="js codigo">console.log(amigosOrdenados);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-reverse-2">
+                                <button type="button" class="bt-ativar" id="bt-ativar-toreversed-2">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-2">
@@ -122,53 +122,7 @@
                                 <br /><br /><br /><br /><br />
                             </div>
                         </div>
-
-                        <p class="paragrafo-artigo">
-                            O sort() reconhece a ordem entre dois elementos ao subtrair os valores de um pelo outro.
-                        </p>
-                        <ul>
-                            <li>Se o valor for negativo ou 0, não é necessário trocar a ordem entre os dois elementos</li>
-                            <li>Se o valor for positivo, troque a ordem entre os dois elementos</li>
-                        </ul>
                     </section>
-                    <!-- destrutivo -->
-                     <section>
-                        <h3 class="titulo-secao">
-                            Comportamento Destrutivo
-                        </h3>
-                        <p class="paragrafo-artigo">
-                            O método reverse() altera as ordens dos valores diretamente no espaço de memória onde está armazenado o array original. Ou seja: invocou reverse(), perdeu o array original.
-                        </p>
-                        <div class="container-blocos-codigos">
-                            <header class="header-codigo">
-                                <h4>Array.reverse()</h4>
-                            </header>
-
-                            <div class="input">
-                                <span class="js comentario">// criação do array original</span>
-                                <span class="js codigo">let amigos = ["pikachu", "zapdos", "ratatatatatatatatata", "bulbassauro"];</span>
-                                <span class="js codigo">console.log(amigos);</span>
-                                <br />
-                                <span class="js comentario">// tentativa de criar cópia</span>
-                                <span class="js codigo">let amigosReverse = cidades.reverse();</span>
-                                <span class="js codigo">console.log(amigos);</span>
-                                <span class="js codigo">console.log(amigosReverse);</span>
-                            </div>
-
-                            <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-reverse-3">
-                                    Ativar
-                                </button>
-                                <button type="button" class="bt-resetar" id="bt-resetar-3">
-                                    Resetar
-                                </button>
-                            </div>
-                                
-                            <div class="output" id="output-3">
-                                <br><br><br><br>
-                            </div>
-                        </div>
-                     </section>
             </article>
             </main>
             <!-- RODAPÉ -->
@@ -195,6 +149,6 @@
         </div>
 
 
-        <script src="./js/reverse.js"></script>
+        <script src="./js/toReversed.js"></script>
     </body>
 </html>
