@@ -50,6 +50,14 @@ p {
     font-size: var(--paragrafoMedio);
 }
 
+li {
+    margin: 0.5rem;
+}
+
+.titulo-secao {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
 
 .page-container {
     width: 100%;
@@ -62,6 +70,7 @@ p {
     padding: 1rem;
     background-color: var(--corFundoMaisClaro);
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .header-codigo {
@@ -79,8 +88,12 @@ p {
     margin-bottom: 1rem;
 }
 
-.output {
-    height: 5rem;
+#output-1 {
+    height: 3.5rem;
+}
+
+#output-2 {
+    height: 8rem;
 }
 
 /* estilizar botões da demonstração de código */

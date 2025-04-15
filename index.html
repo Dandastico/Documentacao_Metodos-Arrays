@@ -25,6 +25,7 @@
                             Como o método sort() retorna o array ordenado no mesmo espaço de memória onde o array original estava armazenado, esse método é considerado "destrutivo". Ao utilizar sort(), perde-se o array original.
                         </p>
                     </section>
+                    <!-- ordenamento com strings -->
                     <section class="demo">
                         <header>
                             <h3 class="titulo-secao">
@@ -36,17 +37,17 @@
                                 </header>
 
                                 <div class="input">
-                                    <span class="js comentario">// criação da string original</span>
+                                    <span class="js comentario">// criação do array original</span>
                                     <span class="js codigo">let strings = ["daniel", "ama", "jordan"];</span>
                                     <span class="js codigo">console.log(strings);</span>
                                     <br />
-                                    <span class="js comentario">// ordenamento dos elementos da string alfabeticamente</span>
+                                    <span class="js comentario">// ordenamento dos elementos do array alfabeticamente</span>
                                     <span class="js codigo">strings.sort();</span>
                                     <span class="js codigo">console.log(strings);</span>
                                 </div>
 
                                 <div class="container-bt">
-                                    <button type="button" class="bt-ativar" id="bt-ativar-sort1">
+                                    <button type="button" class="bt-ativar" id="bt-ativar-sort-1">
                                         Ativar
                                     </button>
                                     <button type="button" class="bt-resetar" id="bt-resetar-1">
@@ -59,6 +60,73 @@
                                 </div>
                             </div>
                         </header>
+                    </section>
+                    <!-- ordenamento com números -->
+                    <section>
+                        <header>
+                            <h3 class="titulo-secao">
+                                Ordenar números
+                            </h3>
+                        </header>
+                        <p class="paragrafo-artigo">
+                            O método sort(), por padrão, trata todos os elementos que compõe o array como string. Por padrão, se o array tiver armazenado os valores [100, 4, 20], o método ordenará os elementos da seguinte forma:
+                        </p>
+                        <ul>
+                            <li>Primeiro, os números inteiros serão convertidos em strings: ["100", "2", "40"]</li>
+                            <li>Pegue o primeiro caractere que compõe os strings (nesse caso: '1', '4' e '2')</li>
+                            <li>Ordene as strings comparando o valor dos caracteres na tabela UTF-16</li>
+                        </ul>
+                        <p class="paragrafo-artigo">
+                            Como '1' é menor que '4' e '2', o elemento "100" ficará na primeira posição. O array ordenado pelo método sort() retornará ["100", "40", "3"].
+                        </p>
+                        <p class="paragrafo-artigo">
+                            Para o método ordenar corretamente números, tanto de maneira ascendente quanto decrescente, é necessário instruir o método como os elementos devem ser comparados.
+                        </p>
+                        <!-- demonstração de código -->
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Array.sort()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// criação do array original</span>
+                                <span class="js codigo">let nums = [100, 4, 20];</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenar array sem instrução</span>
+                                <span class="js codigo">nums.sort();</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenamento dos elementos do array de maneira ascendente</span>
+                                <span class="js codigo">nums.sort((a, b) => a - b);</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenamento dos elementos do array de maneira descendente</span>
+                                <span class="js codigo">nums.sort((a,b) => b - a);</span>
+                                <span class="js codigo">console.log(nums);</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-sort-2">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-2">
+                                    Resetar
+                                </button>
+                            </div>
+
+                            <div class="output" id="output-2">
+
+                            </div>
+                        </div>
+
+                        <p class="paragrafo-artigo">
+                            O sort() reconhece a ordem entre dois elementos ao subtrair os valores de um pelo outro.
+                        </p>
+                        <ul>
+                            <li>Se o valor for negativo ou 0, não é necessário trocar a ordem entre os dois elementos</li>
+                            <li>Se o valor for positivo, troque a ordem entre os dois elementos</li>
+                        </ul>
                     </section>
             </article>
             </main>
