@@ -42,7 +42,7 @@
                             Se algum dos valores comparados for "NaN", min() retornará "NaN". Se invocar o min() sem nenhum argumento, retornará "Infinity".
                         </p>
                     </section>
-                    <!-- ordenamento com strings -->
+                    <!-- exemplos com min() -->
                     <section class="demo">
                         <header>
                             <h3 class="titulo-secao">
@@ -81,53 +81,37 @@
                             </div>
                         </div>
                     </section>
-                    <!-- ordenamento com números -->
+                    <!-- definição de valor-teto -->
                     <section>
                         <header>
                             <h3 class="titulo-secao">
-                                Ordenar números
+                                Criação de um Valor-Teto
                             </h3>
                         </header>
                         <p class="paragrafo-artigo">
-                            O método toSorted(), por padrão, trata todos os elementos que compõe o array como string. Se o array armazena os valores [100, 4, 20], o método ordenará os elementos da seguinte forma:
-                        </p>
-                        <ul>
-                            <li>Primeiro, os números inteiros serão convertidos em strings: ["100", "2", "40"]</li>
-                            <li>Pegue o primeiro caractere que compõe os strings (nesse caso: '1', '4' e '2')</li>
-                            <li>Ordene as strings comparando o valor dos caracteres na tabela UTF-16</li>
-                        </ul>
-                        <p class="paragrafo-artigo">
-                            Como '1' é menor que '4' e '2', o elemento "100" ficará na primeira posição. O array ordenado pelo método toSorted() retornará ["100", "20", "4"].
+                            É uma boa prática utilizar o min() para estabelecer um limite de valor máximo.
                         </p>
                         <p class="paragrafo-artigo">
-                            Para o método ordenar corretamente números, tanto de maneira ascendente quanto decrescente, é necessário instruir o método como os elementos devem ser comparados.
+                            Por exemplo: ao criar um programa que calcula a nota média de um aluno, é possível utilizar o min() para evitar que a nota que será impressa no boletim supere a nota máxima (10, por exemplo).
                         </p>
                         <!-- demonstração de código -->
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.toSorted()</h4>
+                                <h4>Math.min()</h4>
                             </header>
 
                             <div class="input">
-                                <span class="js comentario">// criação do array original</span>
-                                <span class="js codigo">let nums = [100, 4, 20];</span>
-                                <span class="js codigo">console.log(nums);</span>
+                                <span class="js comentario">// aluno tirou 10 nas duas provas e recebeu pontuação extra</span>
+                                <span class="js codigo">let media = (10 + 10) / 2 + 1;</span>
+                                <span class="js codigo">console.log(media);</span>
                                 <br />
-                                <span class="js comentario">// ordenar array sem instrução</span>
-                                <span class="js codigo">let numsOrdenados = nums.toSorted();</span>
-                                <span class="js codigo">console.log(numsOrdenados);</span>
-                                <br />
-                                <span class="js comentario">// ordenamento dos elementos do array de maneira ascendente</span>
-                                <span class="js codigo">numsOrdenados = nums.toSorted((a, b) => a - b);</span>
-                                <span class="js codigo">console.log(numsOrdenados);</span>
-                                <br />
-                                <span class="js comentario">// ordenamento dos elementos do array de maneira descendente</span>
-                                <span class="js codigo">numsOrdenados = nums.toSorted((a,b) => b - a);</span>
-                                <span class="js codigo">console.log(numsOrdenados);</span>
+                                <span class="js comentario">// utiliar o min() para criar um valor máximo permitido</span>
+                                <span class="js codigo">media = Math.min(10, media);</span>
+                                <span class="js codigo">console.log(media);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-tosorted-2">
+                                <button type="button" class="bt-ativar" id="bt-ativar-min-2">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-2">
@@ -136,17 +120,105 @@
                             </div>
 
                             <div class="output" id="output-2">
-                                <br><br><br><br><br><br><br>
+                                <br /><br /><br />
                             </div>
                         </div>
-
+                    </section>
+                    <!-- Começo da seção sobre max() -->
+                    <header>
+                        <h2 class="titulo-artigo">
+                            Math.max()
+                        </h2>
+                    </header>
+                    <section class="intro">
                         <p class="paragrafo-artigo">
-                            O sort() reconhece a ordem entre dois elementos ao subtrair os valores de um pelo outro.
+                            O método max() retorna o maiorvalor entre múltiplos valores numéricos.
                         </p>
-                        <ul>
-                            <li>Se o valor for negativo ou 0, não é necessário trocar a ordem entre os dois elementos</li>
-                            <li>Se o valor for positivo, troque a ordem entre os dois elementos</li>
-                        </ul>
+                        <p class="paragrafo-artigo">
+                            Se algum dos valores comparados for "NaN", min() retornará "NaN". Se invocar o min() sem nenhum argumento, retornará "Infinity".
+                        </p>
+                    </section>
+                    <!-- exemplos com max() -->
+                    <section class="demo">
+                        <header>
+                            <h3 class="titulo-secao">
+                                Demo
+                            </h3>
+                        </header>
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Math.max()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// max() com mútiplos valores numéricos</span>
+                                <span class="js codigo">let m = Math.max(10, 5, 8);</span>
+                                <span class="js codigo">console.log(m);</span>
+                                <br />
+                                <span class="js comentario">// max() com um dos valores igual a "NaN"</span>
+                                <span class="js codigo">let n = NaN;</span>
+                                <span class="js codigo">console.log(Math.max(m, n));</span>
+                                <br />
+                                <span class="js comentario">// max() sem argumentos</span>
+                                <span class="js codigo">console.log(Math.max());</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-max-1">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-3">
+                                    Resetar
+                                </button>
+                            </div>
+                            
+                            <div class="output" id="output-1">
+                                <br /><br /><br /><br /><br />
+                            </div>
+                        </div>
+                    </section>
+                    <!-- definição de valor-piso -->
+                    <section>
+                        <header>
+                            <h3 class="titulo-secao">
+                                Criação de um Valor-Piso
+                            </h3>
+                        </header>
+                        <p class="paragrafo-artigo">
+                            É uma boa prática utilizar o max() para estabelecer um limite de valor mínimo.
+                        </p>
+                        <p class="paragrafo-artigo">
+                            Por exemplo: ao criar um programa que calcula a nota média de um aluno, é possível utilizar o max() para evitar que a nota que será impressa no boletim seja menor que o a nota mínima (0, por exemplo).
+                        </p>
+                        <!-- demonstração de código -->
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Math.max()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// aluno tirou 0 nas duas provas e recebeu punições extras</span>
+                                <span class="js codigo">let media = (0 + 0) / 2 + (-1);</span>
+                                <span class="js codigo">console.log(media);</span>
+                                <br />
+                                <span class="js comentario">// utiliar o max() para criar um valor mínimo permitido</span>
+                                <span class="js codigo">media = Math.max(0, media);</span>
+                                <span class="js codigo">console.log(media);</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-max-2">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-4">
+                                    Resetar
+                                </button>
+                            </div>
+
+                            <div class="output" id="output-2">
+                                <br /><br /><br />
+                            </div>
+                        </div>
                     </section>
             </article>
             </main>
