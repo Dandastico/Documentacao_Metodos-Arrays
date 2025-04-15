@@ -39,7 +39,7 @@
                             O método toSorted() de uma instância de Array ordena os elementos que o compõe. O comportamento padrão de toSorted() é ordenar de maneira alfabética ascendente, convertendo seus elementos em strings e comparando cada caractere em seus valores UTF-16.
                         </p>
                         <p class="paragrafo-artigo">
-                            O método toSorted() não é destrutivo, considerado uma versão que copia de sort().
+                            O método toSorted() não é destrutivo, considerado uma versão copiadora de sort().
                         </p>
                     </section>
                     <!-- ordenamento com strings -->
@@ -86,7 +86,7 @@
                             </h3>
                         </header>
                         <p class="paragrafo-artigo">
-                            O método sort(), por padrão, trata todos os elementos que compõe o array como string. Se o array armazena os valores [100, 4, 20], o método ordenará os elementos da seguinte forma:
+                            O método toSorted(), por padrão, trata todos os elementos que compõe o array como string. Se o array armazena os valores [100, 4, 20], o método ordenará os elementos da seguinte forma:
                         </p>
                         <ul>
                             <li>Primeiro, os números inteiros serão convertidos em strings: ["100", "2", "40"]</li>
@@ -94,7 +94,7 @@
                             <li>Ordene as strings comparando o valor dos caracteres na tabela UTF-16</li>
                         </ul>
                         <p class="paragrafo-artigo">
-                            Como '1' é menor que '4' e '2', o elemento "100" ficará na primeira posição. O array ordenado pelo método sort() retornará ["100", "20", "4"].
+                            Como '1' é menor que '4' e '2', o elemento "100" ficará na primeira posição. O array ordenado pelo método toSorted() retornará ["100", "20", "4"].
                         </p>
                         <p class="paragrafo-artigo">
                             Para o método ordenar corretamente números, tanto de maneira ascendente quanto decrescente, é necessário instruir o método como os elementos devem ser comparados.
@@ -102,7 +102,7 @@
                         <!-- demonstração de código -->
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.sort()</h4>
+                                <h4>Array.toSorted()</h4>
                             </header>
 
                             <div class="input">
@@ -111,20 +111,20 @@
                                 <span class="js codigo">console.log(nums);</span>
                                 <br />
                                 <span class="js comentario">// ordenar array sem instrução</span>
-                                <span class="js codigo">nums.sort();</span>
-                                <span class="js codigo">console.log(nums);</span>
+                                <span class="js codigo">let numsOrdenados = nums.toSorted();</span>
+                                <span class="js codigo">console.log(numsOrdenados);</span>
                                 <br />
                                 <span class="js comentario">// ordenamento dos elementos do array de maneira ascendente</span>
-                                <span class="js codigo">nums.sort((a, b) => a - b);</span>
-                                <span class="js codigo">console.log(nums);</span>
+                                <span class="js codigo">numsOrdenados = nums.toSorted((a, b) => a - b);</span>
+                                <span class="js codigo">console.log(numsOrdenados);</span>
                                 <br />
                                 <span class="js comentario">// ordenamento dos elementos do array de maneira descendente</span>
-                                <span class="js codigo">nums.sort((a,b) => b - a);</span>
-                                <span class="js codigo">console.log(nums);</span>
+                                <span class="js codigo">numsOrdenados = nums.toSorted((a,b) => b - a);</span>
+                                <span class="js codigo">console.log(numsOrdenados);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-sort-2">
+                                <button type="button" class="bt-ativar" id="bt-ativar-tosorted-2">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-2">
@@ -145,44 +145,6 @@
                             <li>Se o valor for positivo, troque a ordem entre os dois elementos</li>
                         </ul>
                     </section>
-                    <!-- destrutivo -->
-                     <section>
-                        <h3 class="titulo-secao">
-                            Comportamento Destrutivo
-                        </h3>
-                        <p class="paragrafo-artigo">
-                            O método sort() altera as ordens dos valores diretamente no espaço de memória onde está armazenado o array original. Ou seja: invocou sort(), perdeu o array original.
-                        </p>
-                        <div class="container-blocos-codigos">
-                            <header class="header-codigo">
-                                <h4>Array.sort()</h4>
-                            </header>
-
-                            <div class="input">
-                                <span class="js comentario">// criação do array original</span>
-                                <span class="js codigo">let cidades = ["brasilia", "belo horizonte", "salvador", "porto seguro"];</span>
-                                <span class="js codigo">console.log(cidades);</span>
-                                <br />
-                                <span class="js comentario">// tentativa de criar cópia</span>
-                                <span class="js codigo">let cidadesOrdenadas = cidades.sort();</span>
-                                <span class="js codigo">console.log(cidades);</span>
-                                <span class="js codigo">console.log(cidadesOrdenadas);</span>
-                            </div>
-
-                            <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-sort-3">
-                                    Ativar
-                                </button>
-                                <button type="button" class="bt-resetar" id="bt-resetar-3">
-                                    Resetar
-                                </button>
-                            </div>
-                                
-                            <div class="output" id="output-3">
-                                <br><br><br><br>
-                            </div>
-                        </div>
-                     </section>
             </article>
             </main>
             <!-- RODAPÉ -->
