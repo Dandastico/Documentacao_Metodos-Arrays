@@ -36,13 +36,13 @@
                     </header>
                     <section class="intro">
                         <p class="paragrafo-artigo">
-                            O método sort() de uma instância de Array ordena os elementos que o compõe e retorna a referência do mesmo array. O comportamento padrão de sort() é ordenar de maneira ascendente, convertendo seus elementos em strings e comparando cada caractere em seus valores UTF-16.
+                            O método reverse(), ao contrário de sort(), não ordena de maneira ascendente ou descendente os elementes de um array. O que o método faz é inverter os índices dos elementos que compõe o array, substituindo a posição do primeiro com o último, do segundo com o penúltimo, até encontrar a metade.
                         </p>
                         <p class="paragrafo-artigo">
-                            Como o método sort() retorna o array ordenado no mesmo espaço de memória onde o array original estava armazenado, esse método é considerado "destrutivo". Ao utilizar sort(), perde-se o array original.
+                            Assim como o sort(), o reverse() é um método destrutivo. Ou seja, ao utillizá-lo perde-se o array original. 
                         </p>
                     </section>
-                    <!-- ordenamento com strings -->
+                    <!-- demonstração de reverse() -->
                     <section class="demo">
                         <header>
                             <h3 class="titulo-secao">
@@ -51,28 +51,28 @@
                         </header>
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.sort()</h4>
+                                <h4>Array.reverse()</h4>
                             </header>
 
                             <div class="input">
                                 <span class="js comentario">// criação do array original</span>
-                                <span class="js codigo">let strings = ["daniel", "ama", "jordan"];</span>
-                                <span class="js codigo">console.log(strings);</span>
+                                <span class="js codigo">let nomes = ["prof carvalho", "ash ketchum da cidade de pallet", "misty", "brock"];</span>
+                                <span class="js codigo">console.log(nomes);</span>
                                 <br />
-                                <span class="js comentario">// ordenamento dos elementos do array alfabeticamente</span>
-                                <span class="js codigo">strings.sort();</span>
-                                <span class="js codigo">console.log(strings);</span>
+                                <span class="js comentario">// execução do método reverse()</span>
+                                <span class="js codigo">nomes.reverse();</span>
+                                <span class="js codigo">console.log(nomes);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-sort-1">
+                                <button type="button" class="bt-ativar" id="bt-ativar-reverse-1">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-1">
                                     Resetar
                                 </button>
                             </div>
-                            
+                                
                             <div class="output" id="output-1">
                                 <br><br><br>
                             </div>
