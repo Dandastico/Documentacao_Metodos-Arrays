@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <link href="styles.css" rel="stylesheet">
+        <title>JavaScript Array Sort</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-items"><a class="nav-links" href="index.html">início</a></li>
+                    <li class="nav-items"><a class="nav-links" href="sort.html">sort</a></li>
+                    <li class="nav-items"><a class="nav-links" href="reverse.html">reverse</a></li>
+                    <li class="nav-items"><a class="nav-links" href="tosorted.html">toSorted</a></li>
+                    <li class="nav-items"><a class="nav-links" href="toreversed.html">toReversed</a></li>
+                    <li class="nav-items"><a class="nav-links" href="minmax.html">min e max</a></li>
+                </ul>
+            </nav>
+            <header class="tema">
+                <h1>Ordenamento em JavaScript</h1>
+            </header>
+            <main id="conteudo" class="conteudo-principal">
+                <article>
+                    <header>
+                        <h2 class="titulo-artigo">
+                            sort()
+                        </h2>
+                    </header>
+                    <section class="intro">
+                        <p class="paragrafo-artigo">
+                            O método sort() de uma instância de Array ordena os elementos que o compõe e retorna a referência do mesmo array. O comportamento padrão de sort() é ordenar de maneira ascendente, convertendo seus elementos em strings e comparando cada caractere em seus valores UTF-16.
+                        </p>
+                        <p class="paragrafo-artigo">
+                            Como o método sort() retorna o array ordenado no mesmo espaço de memória onde o array original estava armazenado, esse método é considerado "destrutivo". Ao utilizar sort(), perde-se o array original.
+                        </p>
+                    </section>
+                    <!-- ordenamento com strings -->
+                    <section class="demo">
+                        <header>
+                            <h3 class="titulo-secao">
+                                Demo
+                            </h3>
+                        </header>
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Array.sort()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// criação do array original</span>
+                                <span class="js codigo">let strings = ["daniel", "ama", "jordan"];</span>
+                                <span class="js codigo">console.log(strings);</span>
+                                <br />
+                                <span class="js comentario">// ordenamento dos elementos do array alfabeticamente</span>
+                                <span class="js codigo">strings.sort();</span>
+                                <span class="js codigo">console.log(strings);</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-sort-1">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-1">
+                                    Resetar
+                                </button>
+                            </div>
+                            
+                            <div class="output" id="output-1">
+                                <br><br><br>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ordenamento com números -->
+                    <section>
+                        <header>
+                            <h3 class="titulo-secao">
+                                Ordenar números
+                            </h3>
+                        </header>
+                        <p class="paragrafo-artigo">
+                            O método sort(), por padrão, trata todos os elementos que compõe o array como string. Se o array armazena os valores [100, 4, 20], o método ordenará os elementos da seguinte forma:
+                        </p>
+                        <ul>
+                            <li>Primeiro, os números inteiros serão convertidos em strings: ["100", "2", "40"]</li>
+                            <li>Pegue o primeiro caractere que compõe os strings (nesse caso: '1', '4' e '2')</li>
+                            <li>Ordene as strings comparando o valor dos caracteres na tabela UTF-16</li>
+                        </ul>
+                        <p class="paragrafo-artigo">
+                            Como '1' é menor que '4' e '2', o elemento "100" ficará na primeira posição. O array ordenado pelo método sort() retornará ["100", "20", "4"].
+                        </p>
+                        <p class="paragrafo-artigo">
+                            Para o método ordenar corretamente números, tanto de maneira ascendente quanto decrescente, é necessário instruir o método como os elementos devem ser comparados.
+                        </p>
+                        <!-- demonstração de código -->
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Array.sort()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// criação do array original</span>
+                                <span class="js codigo">let nums = [100, 4, 20];</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenar array sem instrução</span>
+                                <span class="js codigo">nums.sort();</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenamento dos elementos do array de maneira ascendente</span>
+                                <span class="js codigo">nums.sort((a, b) => a - b);</span>
+                                <span class="js codigo">console.log(nums);</span>
+                                <br />
+                                <span class="js comentario">// ordenamento dos elementos do array de maneira descendente</span>
+                                <span class="js codigo">nums.sort((a,b) => b - a);</span>
+                                <span class="js codigo">console.log(nums);</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-sort-2">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-2">
+                                    Resetar
+                                </button>
+                            </div>
+
+                            <div class="output" id="output-2">
+                                <br><br><br><br><br><br><br>
+                            </div>
+                        </div>
+
+                        <p class="paragrafo-artigo">
+                            O sort() reconhece a ordem entre dois elementos ao subtrair os valores de um pelo outro.
+                        </p>
+                        <ul>
+                            <li>Se o valor for negativo ou 0, não é necessário trocar a ordem entre os dois elementos</li>
+                            <li>Se o valor for positivo, troque a ordem entre os dois elementos</li>
+                        </ul>
+                    </section>
+                    <!-- destrutivo -->
+                     <section>
+                        <h3 class="titulo-secao">
+                            Comportamento Destrutivo
+                        </h3>
+                        <p class="paragrafo-artigo">
+                            O método sort() altera as ordens dos valores diretamente no espaço de memória onde está armazenado o array original. Ou seja: invocou sort(), perdeu o array original.
+                        </p>
+                        <div class="container-blocos-codigos">
+                            <header class="header-codigo">
+                                <h4>Array.sort()</h4>
+                            </header>
+
+                            <div class="input">
+                                <span class="js comentario">// criação do array original</span>
+                                <span class="js codigo">let cidades = ["brasilia", "belo horizonte", "salvador", "porto seguro"];</span>
+                                <span class="js codigo">console.log(cidades);</span>
+                                <br />
+                                <span class="js comentario">// tentativa de criar cópia</span>
+                                <span class="js codigo">let cidadesOrdenadas = cidades.sort();</span>
+                                <span class="js codigo">console.log(cidades);</span>
+                                <span class="js codigo">console.log(cidadesOrdenadas);</span>
+                            </div>
+
+                            <div class="container-bt">
+                                <button type="button" class="bt-ativar" id="bt-ativar-sort-3">
+                                    Ativar
+                                </button>
+                                <button type="button" class="bt-resetar" id="bt-resetar-3">
+                                    Resetar
+                                </button>
+                            </div>
+                                
+                            <div class="output" id="output-3">
+                                <br><br><br><br>
+                            </div>
+                        </div>
+                     </section>
+            </article>
+            </main>
+            <!-- RODAPÉ -->
+            <footer>
+                <div>
+                    <ul class="nav-rodape-lista">
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="index.html">início</a></li>
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="sort.html">sort</a></li>
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="reverse.html">reverse</a></li>
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="toSorted.html">toSorted</a></li>
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="toReversed.html">toReversed</a></li>
+                        <li class="nav-rodape-items"><a class="nav-rodape-links" href="minmax.html">min e max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="texto-rodape">
+                        Grupo: Alex, Daniel, Filipe, Isadora, Lucas Gabriel, Victor Gabriel
+                    </p>
+                    <p class="texto-rodape">
+                        ADS Matutino, Turma B
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="./js/reverse.js"></script>
+    </body>
+</html>

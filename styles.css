@@ -63,6 +63,10 @@ h4 {
     font-weight: 400;
 }
 
+.titulo-index {
+    font-size: 3rem;
+}
+
 .paragrafo-artigo {
     font-size: var(--paragrafoMedio);
     line-height: 1.5;
@@ -89,7 +93,6 @@ nav {
     display: flex;
     align-items: center;
     margin: 0 auto 2rem;
-    width: 100%;
     background: var(--corFundoMaisClaro);
     border-bottom: var(--borderNav);
 }
@@ -142,6 +145,11 @@ nav {
 
 .input {
     margin-bottom: 1rem;
+}
+
+.output{
+    color: var(--corVermelha);
+    font-weight: 600;
 }
 
 
