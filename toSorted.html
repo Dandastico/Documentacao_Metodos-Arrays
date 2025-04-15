@@ -10,7 +10,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
         <link href="styles.css" rel="stylesheet">
-        <title>JS Array.sort()</title>
+        <title>JS Array.toSorted()</title>
     </head>
     <body>
         <div class="page-container">
@@ -31,15 +31,15 @@
                 <article>
                     <header>
                         <h2 class="titulo-artigo">
-                            sort()
+                            toSorted()
                         </h2>
                     </header>
                     <section class="intro">
                         <p class="paragrafo-artigo">
-                            O método sort() de uma instância de Array ordena os elementos que o compõe e retorna a referência do mesmo array. O comportamento padrão de sort() é ordenar de maneira ascendente, convertendo seus elementos em strings e comparando cada caractere em seus valores UTF-16.
+                            O método toSorted() de uma instância de Array ordena os elementos que o compõe. O comportamento padrão de toSorted() é ordenar de maneira alfabética ascendente, convertendo seus elementos em strings e comparando cada caractere em seus valores UTF-16.
                         </p>
                         <p class="paragrafo-artigo">
-                            Como o método sort() retorna o array ordenado no mesmo espaço de memória onde o array original estava armazenado, esse método é considerado "destrutivo". Ao utilizar sort(), perde-se o array original.
+                            O método toSorted() não é destrutivo, considerado uma versão que copia de sort().
                         </p>
                     </section>
                     <!-- ordenamento com strings -->
@@ -51,21 +51,21 @@
                         </header>
                         <div class="container-blocos-codigos">
                             <header class="header-codigo">
-                                <h4>Array.sort()</h4>
+                                <h4>Array.toSorted()</h4>
                             </header>
 
                             <div class="input">
                                 <span class="js comentario">// criação do array original</span>
-                                <span class="js codigo">let strings = ["daniel", "ama", "jordan"];</span>
-                                <span class="js codigo">console.log(strings);</span>
+                                <span class="js codigo">let inimigos = ["vegê", "isadora", "alex", "filipe", "lucas"];</span>
                                 <br />
                                 <span class="js comentario">// ordenamento dos elementos do array alfabeticamente</span>
-                                <span class="js codigo">strings.sort();</span>
-                                <span class="js codigo">console.log(strings);</span>
+                                <span class="js codigo">let inimigosOrdenados = strings.toSortedt();</span>
+                                <span class="js codigo">console.log(inimigos);</span>
+                                <span class="js codigo">console.log(inimigosOrdenados);</span>
                             </div>
 
                             <div class="container-bt">
-                                <button type="button" class="bt-ativar" id="bt-ativar-sort-1">
+                                <button type="button" class="bt-ativar" id="bt-ativar-tosorted-1">
                                     Ativar
                                 </button>
                                 <button type="button" class="bt-resetar" id="bt-resetar-1">
@@ -209,6 +209,6 @@
         </div>
 
 
-        <script src="./js/sort.js"></script>
+        <script src="./js/toSorted.js"></script>
     </body>
 </html>
