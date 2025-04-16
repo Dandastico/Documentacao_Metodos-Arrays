@@ -230,3 +230,38 @@ footer {
 
 
 /* responsividade com media */
+@media only screen and (max-width: 1200px) {
+    nav {
+        padding-inline: 6rem;
+    }
+
+    main {
+        padding-inline: 6rem;
+    }
+
+    .tema {
+        padding-inline: 6rem;
+    }
+
+    footer {
+        padding-inline: 6rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        padding-inline: 2rem;
+    }
+
+    main {
+        padding-inline: 2rem;
+    }
+
+    .tema {
+        padding-inline: 2rem;
+    }
+
+    footer {
+        padding-inline: 2rem;
+    }
+}
