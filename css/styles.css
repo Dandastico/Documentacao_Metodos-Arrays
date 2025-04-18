@@ -141,6 +141,7 @@ nav {
     padding: 1rem 0.75rem;
     border: var(--border);
     background-color: var(--corFundoMaisClaro);
+    font-family: "Courier Prime", monospace; 
 }
 
 .input {
