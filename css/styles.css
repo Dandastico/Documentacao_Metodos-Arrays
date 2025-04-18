@@ -97,6 +97,10 @@ nav {
     border-bottom: var(--borderNav);
 }
 
+.nav-mobile {
+    display: hidden;
+}
+
 .nav-list {
     margin-left: 0;
     padding-left: 0;
@@ -232,6 +236,7 @@ footer {
 
 /* responsividade com media */
 @media only screen and (max-width: 1200px) {
+    /* padding */
     nav {
         padding-inline: 6rem;
     }
@@ -247,9 +252,19 @@ footer {
     footer {
         padding-inline: 6rem;
     }
+
+    /* nav */
+    .nav-large {
+        display: hidden;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 800px) {
+    /* padding */
     nav {
         padding-inline: 2rem;
     }
