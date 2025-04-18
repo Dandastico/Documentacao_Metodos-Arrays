@@ -98,7 +98,7 @@ nav {
 }
 
 .nav-mobile {
-    display: hidden;
+    display: none;
 }
 
 .nav-list {
@@ -237,25 +237,20 @@ footer {
 /* responsividade com media */
 @media only screen and (max-width: 1200px) {
     /* padding */
-    nav {
+    nav, main, .tema, footer {
         padding-inline: 6rem;
     }
+}
 
-    main {
-        padding-inline: 6rem;
-    }
-
-    .tema {
-        padding-inline: 6rem;
-    }
-
-    footer {
-        padding-inline: 6rem;
+@media only screen and (max-width: 1024px) {
+    /* padding */
+    nav, main, .tema, footer {
+        padding-inline: 4rem;
     }
 
     /* nav */
     .nav-large {
-        display: hidden;
+        display: none;
     }
 
     .nav-mobile {
@@ -279,5 +274,14 @@ footer {
 
     footer {
         padding-inline: 2rem;
+    }
+
+    /* nav */
+    .nav-large {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
     }
 }
