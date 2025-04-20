@@ -256,6 +256,20 @@ footer {
     .nav-mobile {
         display: flex;
     }
+
+    .btn-nav-mobile-atv {
+        background: none;
+        cursor: pointer;
+        text-shadow: none;
+        appearance: none;
+        border: none;
+        color: var(--corBege);
+        display: inline-flex;
+    }
+
+    .icon-hamburger {
+        color: var(--corBege);
+    }
 }
 
 @media only screen and (max-width: 800px) {
