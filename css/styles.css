@@ -204,6 +204,11 @@ nav {
     padding: 1rem 0;
 }
 
+.nav-medium-items > a {
+    display: block;
+    width: 100%;
+}
+
 .icon-close-medium {
     stroke: var(--corBege);
     stroke-width: 40px;
