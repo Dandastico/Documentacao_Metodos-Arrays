@@ -130,18 +130,20 @@ nav {
     flex-direction: row-reverse;
 }
 
-
 .nav-medium-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .nav-medium-icons {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-links:hover {
@@ -164,7 +166,6 @@ nav {
     margin-top: 0.5rem;
 }
 
-/* nav ativada */
 .container-nav-overlay {
     position: fixed;
     top: 0;
@@ -178,13 +179,28 @@ nav {
 
 .nav-medium-overlay {
     width: 100%;
+    align-items: stretch;
+    margin: 0;
+    border: none;
 }
 
 .nav-medium-items-cls {
     background: var(--corFundoMaisClaro);
+    border-bottom: 3px solid var(--corVermelha);
     width: 100%;
-    border-bottom: var(--border);
+    display: flex;
+    justify-content: flex-end;
+}
 
+#btn-nav-medium-cls {
+    margin-bottom: 1rem;
+}
+
+.nav-medium-items {
+    width: 100%;
+    border-bottom: 2px solid var(--corBege);
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .icon-close-medium {
@@ -192,7 +208,6 @@ nav {
     stroke-width: 40px;
     fill: var(--corBege);
     scale: 1.4;
-    margin-top: 0.5rem;
 }
 
 .show {
@@ -332,10 +347,6 @@ footer {
     .nav-medium {
         display: flex;
     }
-
-    .nav-small {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -350,11 +361,7 @@ footer {
     }
 
     .nav-medium {
-        display:none;
-    }
-
-    .nav-small {
-        display: flex;
+        display:flex;
     }
 
 }
