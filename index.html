@@ -15,7 +15,8 @@
     </head>
     <body>
         <div class="page-container">
-            <nav>
+            <!-- NAVEGAÇÃO -->
+            <nav class="nav-large">
                 <ul class="nav-list">
                     <li class="nav-items"><a class="nav-links" href="index.html">início</a></li>
                     <li class="nav-items"><a class="nav-links" href="sort.html">sort</a></li>
@@ -25,8 +26,21 @@
                     <li class="nav-items"><a class="nav-links" href="minmax.html">min e max</a></li>
                 </ul>
             </nav>
+            <nav class="nav-medium">
+                <ul class="nav-medium-list">
+                    <li class="nav-medium-icons">
+                        <button class="btn-nav-medium" id="btn-nav-medium-atv">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40" role="img" class="icon-hamburger-medium">
+                                <rect width="100" height="15"></rect>
+                                <rect y="30" width="100" height="15"></rect>
+                                <rect y="60" width="100" height="15"></rect>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
             <header class="tema">
-                <h1 class="titulo-index">Ordenamento de Arrays em JavaScript</h1>
+                <h1 class="titulo-index">Arranjo de Arrays em JavaScript</h1>
             </header>
             <main id="conteudo" class="conteudo-principal">
                 <article>
@@ -47,8 +61,8 @@
 
                             <div class="input">
                                 <span class="js comentario">// criação do array</span>
-                                <span class="js codigo">let pokemons = ["bulbassauro", "squirtle", "charmander"];</span>
-                                <span class="js codigo">console.log(pokemons);</span>
+                                <span class="js codigo">let pkmns = ["bulbassauro", "squirtle", "charmander"];</span>
+                                <span class="js codigo">console.log(pkmns);</span>
                             </div>
 
                             <div class="container-bt">
@@ -76,8 +90,8 @@
 
                             <div class="input">
                                 <span class="js comentario">// criação do array</span>
-                                <span class="js codigo">let pokemons = ["bulbassauro", "squirtle", "charmander"];</span>
-                                <span class="js codigo">console.log(pokemons[0]);</span>
+                                <span class="js codigo">let pkmns = ["bulbassauro", "squirtle", "charmander"];</span>
+                                <span class="js codigo">console.log(pkmns[0]);</span>
                             </div>
 
                             <div class="container-bt">
@@ -123,17 +137,28 @@
                         <li class="nav-rodape-items"><a class="nav-rodape-links" href="minmax.html">min e max</a></li>
                     </ul>
                 </div>
-                <div>
-                    <p class="texto-rodape">
-                        Grupo: Alex, Daniel, Filipe, Isadora, Lucas Gabriel, Victor Gabriel
-                    </p>
-                    <p class="texto-rodape">
-                        ADS Matutino, Turma B
-                    </p>
-                </div>
             </footer>
+            <!-- NAVEGAÇÃO MOBILE ATIVADA -->
+            <div class="container-nav-overlay hidden" id="nav-overlay">
+                <nav class="nav-medium-overlay" id="nav-medium-overlay">
+                    <ul class="nav-medium-list">
+                        <li class="nav-medium-items-cls">
+                            <button class="btn-nav-medium" id="btn-nav-medium-cls">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" class="icon-close-medium"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"></path></svg>
+                            </button>
+                        </li>
+                        <li class="nav-medium-items"><a class="nav-links" href="index.html">início</a></li>
+                        <li class="nav-medium-items"><a class="nav-links" href="sort.html">sort</a></li>
+                        <li class="nav-medium-items"><a class="nav-links" href="reverse.html">reverse</a></li>
+                        <li class="nav-medium-items"><a class="nav-links" href="tosorted.html">toSorted</a></li>
+                        <li class="nav-medium-items"><a class="nav-links" href="toreversed.html">toReversed</a></li>
+                        <li class="nav-medium-items"><a class="nav-links" href="minmax.html">min e max</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <script src="js/index.js"></script>
+        <script src="js/menu.js"></script>
     </body>
 </html>
