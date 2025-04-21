@@ -147,7 +147,7 @@ nav {
     color: var(--corVermelha);
 }
 
-.btn-nav-medium-atv {
+.btn-nav-medium {
     background: none;
     cursor: pointer;
     text-shadow: none;
@@ -161,6 +161,28 @@ nav {
 .icon-hamburger-medium {
     fill: var(--corBege);
     margin-top: 0.5rem;
+}
+
+/* nav ativada */
+.nav-overlay {
+    display: none;
+}
+
+.nav-medium-overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-close-medium {
+    fill: var(--corBege);
+}
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
 }
 
 /* demonstrações do código */
@@ -277,6 +299,7 @@ footer {
     }
 }
 
+/* tablet */
 @media only screen and (max-width: 1024px) {
     /* padding */
     nav, main, .tema, footer {
