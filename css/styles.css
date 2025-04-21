@@ -136,9 +136,10 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
 }
 
-.nav-medium-hamburger {
+.nav-medium-icons {
     padding: 0;
     margin: 0;
 }
@@ -164,17 +165,34 @@ nav {
 }
 
 /* nav ativada */
-.nav-overlay {
-    display: none;
+.container-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--corFundoMaisClaro);
+    z-index: 999;
+    overflow: hidden;
 }
 
 .nav-medium-overlay {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+}
+
+.nav-medium-items-cls {
+    background: var(--corFundoMaisClaro);
+    width: 100%;
+    border-bottom: var(--border);
+
 }
 
 .icon-close-medium {
+    stroke: var(--corBege);
+    stroke-width: 40px;
     fill: var(--corBege);
+    scale: 1.4;
+    margin-top: 0.5rem;
 }
 
 .show {
